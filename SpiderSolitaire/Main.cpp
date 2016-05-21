@@ -4,10 +4,12 @@
 #include "FieldWindow.h"
 #include "resource.h"
 #include <iostream>
+#include <ctime>
 
 int WINAPI WinMain(HINSTANCE instance, HINSTANCE prevInstance,
 	LPSTR commandLine, int cmdShow)
 {
+	std::srand(std::time(0));
 	if( !CFieldWindow::RegisterClass() ) {
 		std::cout << "Window Registration Failed!";
 		return 0;
